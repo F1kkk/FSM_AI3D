@@ -627,7 +627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628115357}
   m_Layer: 0
-  m_Name: Waypoint 2
+  m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,11 +642,11 @@ Transform:
   m_GameObject: {fileID: 628115356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.75, y: -0.6, z: 0}
+  m_LocalPosition: {x: -15.25, y: -0.39999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1401391991}
+  m_Father: {fileID: 1333988585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
@@ -800,6 +800,39 @@ Transform:
   m_LocalScale: {x: 52.85, y: 11.18, z: 3.78}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1333988584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333988585}
+  m_Layer: 0
+  m_Name: Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333988585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333988584}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1394610327}
+  - {fileID: 628115357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379406403
@@ -984,7 +1017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1394610327}
   m_Layer: 0
-  m_Name: Waypoint 1
+  m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -999,11 +1032,11 @@ Transform:
   m_GameObject: {fileID: 1394610326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.25, y: -0.6, z: 0}
+  m_LocalPosition: {x: 14.1, y: -0.39999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1401391991}
+  m_Father: {fileID: 1333988585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1401391986
 GameObject:
@@ -1017,8 +1050,9 @@ GameObject:
   - component: {fileID: 1401391990}
   - component: {fileID: 1401391989}
   - component: {fileID: 1401391988}
-  - component: {fileID: 1401391987}
   - component: {fileID: 1401391992}
+  - component: {fileID: 1401391994}
+  - component: {fileID: 1401391993}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1026,31 +1060,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1401391987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401391986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a85b7a067c4b548873abfa9ada0f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  player: {fileID: 1677646539}
-  waypoints:
-  - {fileID: 1394610327}
-  - {fileID: 628115357}
-  moveSpeed: 3
-  chaseSpeed: 2
-  detectionRadius: 10
-  attackRange: 2
-  patrolColor: {r: 0, g: 1, b: 1, a: 1}
-  chaseColor: {r: 0.16304946, g: 1, b: 0.015686274, a: 1}
-  attackColor: {r: 1, g: 0, b: 0, a: 1}
-  statusText: {fileID: 45766479}
 --- !u!136 &1401391988
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1137,8 +1146,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1394610327}
-  - {fileID: 628115357}
   - {fileID: 45766481}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1169,34 +1176,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 96
   m_CollisionDetection: 0
---- !u!1 &1677646535
-GameObject:
+--- !u!114 &1401391993
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1677646539}
-  - component: {fileID: 1677646538}
-  - component: {fileID: 1677646537}
-  - component: {fileID: 1677646536}
-  - component: {fileID: 1677646540}
-  - component: {fileID: 1677646541}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &1677646536
-CapsuleCollider:
+  m_GameObject: {fileID: 1401391986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6b56ad1f9d5b44dba8885a79ca7411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1677646539}
+  waypoints:
+  - {fileID: 1394610327}
+  - {fileID: 628115357}
+  moveSpeed: 3
+  chaseSpeed: 2
+  jumpHeight: 3
+  gravity: -15
+  detectionRadius: 5
+  attackRange: 1
+  patrolColor: {r: 0, g: 1, b: 1, a: 1}
+  chaseColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  attackColor: {r: 1, g: 0, b: 0, a: 1}
+  jumpColor: {r: 0.2, g: 1, b: 0.2, a: 1}
+--- !u!143 &1401391994
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677646535}
+  m_GameObject: {fileID: 1401391986}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1208,11 +1220,34 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  serializedVersion: 3
   m_Height: 2
-  m_Direction: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1677646535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677646539}
+  - component: {fileID: 1677646538}
+  - component: {fileID: 1677646537}
+  - component: {fileID: 1677646541}
+  - component: {fileID: 1677646542}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!23 &1677646537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1272,7 +1307,7 @@ Transform:
   m_GameObject: {fileID: 1677646535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.81, y: 0.6, z: 0}
+  m_LocalPosition: {x: -4.8500004, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1280,25 +1315,6 @@ Transform:
   - {fileID: 1379406406}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1677646540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677646535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be392dbe28046cb438cd7119a92f00a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 6
-  jumpHeight: 2
-  gravity: -15
-  idleColor: {r: 0, g: 0, b: 0, a: 1}
-  walkColor: {r: 0.2, g: 0.6, b: 1, a: 1}
-  jumpColor: {r: 1, g: 0.92574424, b: 0.19999999, a: 1}
-  statusText: {fileID: 1379406404}
 --- !u!143 &1677646541
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1325,6 +1341,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1677646542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677646535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90d735f286ff804587c60bb362f97a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  jumpHeight: 2
+  gravity: -15
+  idleColor: {r: 0, g: 0, b: 0, a: 1}
+  walkColor: {r: 0.2, g: 0.6, b: 1, a: 1}
+  jumpColor: {r: 0.2, g: 1, b: 0.2, a: 1}
+  hideColor: {r: 0, g: 0.100815535, b: 1, a: 1}
 --- !u!1 &1759603564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1399,7 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1271132414}
+  - {fileID: 1333988585}
   - {fileID: 1401391991}
   - {fileID: 1677646539}
   - {fileID: 469983691}
