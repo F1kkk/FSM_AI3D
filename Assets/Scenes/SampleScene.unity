@@ -1197,7 +1197,7 @@ MonoBehaviour:
   jumpHeight: 3
   gravity: -15
   detectionRadius: 5
-  attackRange: 1
+  attackRange: 2
   patrolColor: {r: 0, g: 1, b: 1, a: 1}
   chaseColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   attackColor: {r: 1, g: 0, b: 0, a: 1}
