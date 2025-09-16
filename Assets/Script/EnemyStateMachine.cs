@@ -16,11 +16,17 @@ public class EnemyStateMachine : MonoBehaviour
     public float detectionRadius = 10f;
     public float attackRange = 2f;
 
+    [Header("Probabilities & Timings")]
+    [Range(0, 1)] // Membuat slider di Inspector dari 0 sampai 1
+    public float chaseProbability = 0.8f; // 80% chance to chase
+    public float minObserveTime = 0.5f;
+    public float maxObserveTime = 1.5f;
+
     [Header("Visuals")]
     public Color patrolColor = Color.cyan;
     public Color chaseColor = Color.yellow;
     public Color attackColor = Color.red;
-    public Color jumpColor = new Color(0.2f, 1f, 0.2f); // Warna BARU untuk lompat
+    public Color jumpColor = new Color(1f, 0.5f, 0f); // Orange
 
     // Properti publik
     public CharacterController Controller { get; private set; }
@@ -38,6 +44,7 @@ public class EnemyStateMachine : MonoBehaviour
     public EnemyChaseState ChaseState { get; } = new EnemyChaseState();
     public EnemyAttackState AttackState { get; } = new EnemyAttackState();
     public EnemyInAirState InAirState { get; } = new EnemyInAirState();
+    public EnemyObserveState ObserveState { get; } = new EnemyObserveState(); // State BARU
 
     void Awake()
     {
@@ -72,9 +79,7 @@ public class EnemyStateMachine : MonoBehaviour
     public void Jump()
     {
         if (!Controller.isGrounded) return;
-
         Velocity = new Vector3(Velocity.x, Mathf.Sqrt(jumpHeight * -2f * gravity), Velocity.z);
-        
         ChangeState(InAirState);
     }
 
